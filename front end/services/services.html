@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../Frame 15.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      var x = 0;
+      function show(shown, hidden) {
+        
+        if (x == 0) {
+          document.getElementById(shown).style.display='block';
+          document.getElementById(hidden).style.display='none';
+          x = 1;
+          return false;
+        } else if (x == 1) {
+          document.getElementById(shown).style.display='none';
+          document.getElementById(hidden).style.display='block';
+          x = 0;
+          return false;
+        }
+        
+      }
+      </script>
+    
+    
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <title>Kabaa-D</title>
+</head>
+<body>
+    <header>
+        <h1>Kabaa-D</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                
+                <li>
+                <div class="dropdown">
+                    <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="services.html">Buy</a></li>
+                      <li><a class="dropdown-item" href="services.html">Sell</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                
+
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="togle">
+            <input type="checkbox" id="toggle" class="toggleCheckbox" onchange="return show('sell','buy');" />
+<label for="toggle" class='toggleContainer'>
+  <div class="tt">BUY</div>   
+  <div class="tt">SELL</div>
+</label>
+        </div>
+
+<div id="buy">
+  <table class="row">
+    <tr class="col">
+        <td class="pd">
+            <div id="cards" class="card" style="color: #153e26;">
+                <img src="scraps/paper.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Paper Waste</h5>
+                  <table>
+                    <tr>
+                        <td >Qty</td>
+                        <td class="amt">200 Kg</td>
+                    </tr>
+                    <tr>
+                        <td >Price</td>
+                        <td class="amt">495 HIVE</td>
+                    </tr>
+                  </table>
+                  <a href="#" >Buy Now</a>
+                </div>
+              </div>
+        </td>
+        <td class="pd">
+            <div id="cards" class="card" style="color: #153e26;">
+                <img src="scraps/plastic.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Plastic</h5>
+                  <table>
+                    <tr>
+                        <td >Qty</td>
+                        <td class="amt">200 Kg</td>
+                    </tr>
+                    <tr>
+                        <td >Price</td>
+                        <td class="amt">495 HIVE</td>
+                    </tr>
+                  </table>
+                  <a href="#" >Buy Now</a>
+                </div>
+              </div>
+        </td>
+        <td class="pd">
+            <div id="cards" class="card" style="color: #153e26;">
+                <img src="scraps/e-waste.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">E-Waste</h5>
+                  <table>
+                    <tr>
+                        <td >Qty</td>
+                        <td class="amt">200 Kg</td>
+                    </tr>
+                    <tr>
+                        <td >Price</td>
+                        <td class="amt">495 HIVE</td>
+                    </tr>
+                  </table>
+                  <a href="#" >Buy Now</a>
+                </div>
+              </div>
+        </td>
+        <td class="pd">
+            <div id="cards" class="card" style="color: #153e26;">
+                <img src="scraps/glass.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Glassware</h5>
+                  <table>
+                    <tr>
+                        <td >Qty</td>
+                        <td class="amt">200 Kg</td>
+                    </tr>
+                    <tr>
+                        <td >Price</td>
+                        <td class="amt">495 HIVE</td>
+                    </tr>
+                  </table>
+                  <a href="#" >Buy Now</a>
+                </div>
+              </div>
+        </td>
+    </tr>
+    <tr class="col">
+        <td class="pd">
+            <div id="cards" class="card" style="color: #153e26;">
+                <img src="scraps/metal.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Waste Metal</h5>
+                  <table>
+                    <tr>
+                        <td >Qty</td>
+                        <td class="amt">200 Kg</td>
+                    </tr>
+                    <tr>
+                        <td >Price</td>
+                        <td class="amt">495 HIVE</td>
+                    </tr>
+                  </table>
+                  <a href="#" >Buy Now</a>
+                </div>
+              </div>
+        </td>
+        <td class="pd">
+            <div id="cards" class="card" style="color: #153e26;">
+                <img src="scraps/plastic.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Plastic</h5>
+                  <table>
+                    <tr>
+                        <td >Qty</td>
+                        <td class="amt">200 Kg</td>
+                    </tr>
+                    <tr>
+                        <td >Price</td>
+                        <td class="amt">495 HIVE</td>
+                    </tr>
+                  </table>
+                  <a href="#" >Buy Now</a>
+                </div>
+              </div>
+        </td>
+        <td class="pd">
+            <div id="cards" class="card">
+                <img src="scraps/e-waste.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: #153e26;">E-Waste</h5>
+                  <table>
+                    <tr>
+                        <td>Qty</td>
+                        <td class="amt">200 Kg</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td class="amt">495 HIVE</td>
+                    </tr>
+                  </table>
+                  <a href="#" >Buy Now</a>
+                </div>
+              </div>
+        </td>
+        <td class="pd">
+            <div id="cards" class="card" style="color: #153e26;">
+                <img src="scraps/glass.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Glassware</h5>
+                  <table>
+                    <tr>
+                        <td>Qty</td>
+                        <td class="amt">200 Kg</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td class="amt">495 HIVE</td>
+                    </tr>
+                  </table>
+                  <a href="#" style="margin: 100px 20px 20px 20px;">Buy Now</a>
+                </div>
+              </div>
+        </td>
+    </tr>
+</table>
+
+    </main>
+</div>   
+
+<div id="sell" style="display: none;">
+  <div id="form">
+    <div id="cards" class="card" style="color: #153e26;">
+      <div class="dropdown">
+        <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Type of scraps</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Paper</a></li>
+          <li><a class="dropdown-item" href="#">Plastic</a></li>
+          <li><a class="dropdown-item" href="#">Metal</a></li>
+          <li><a class="dropdown-item" href="#">Glassware</a></li>
+          <li><a class="dropdown-item" href="#">E-Waste</a></li>
+        </ul>
+      </div>
+
+      <input type="image" src="submitimage.png" alt="Submit" width="48" height="48">
+    </div>
+  </div>
+  </div>
+</body>
+</html>
