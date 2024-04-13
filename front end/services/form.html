@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mint NFT Form</title>
+</head>
+<body>
+  <h1>Mint NFT Form</h1>
+  <form id="mintForm">
+    <label for="nftName">Name of NFT:</label>
+    <input type="text" id="nftName" name="nftName" required><br><br>
+
+    <label for="nftPicture">Picture URL:</label>
+    <input type="text" id="nftPicture" name="nftPicture" required><br><br>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" min="0" required><br><br>
+
+    <button type="submit">Mint NFT</button>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/@hiveio/hive-js@1.1.5/dist/hive.min.js"></script>
+  <script>
+    const hive = require('@hiveio/hive-js');
+
+    // Define the Hive node RPC endpoint
+    hive.api.setOptions({ url: 'https://api.hive.blog' });
+
+    // Function to mint NFT
+    async function mintNFT(account, privateKey, nftName, nftPicture, quantity, price) {
+      try {
+        // Generate the transaction
+        const custom_json = JSON.stringify(['nft', {
+          'name': nftName,
+          'picture': nftPicture,
+          'quantity': parseInt(quantity),
+          'price': parseInt(price)
+        }]);
+      
+        const tx = {
+          id: 'ssc-mainnet-hive',
+          json: custom_json,
+          required_auths: [account],
+          required_posting_auths: [],
+        };
+      
+        // Sign and broadcast the transaction
+        const result = await hive.broadcast.customJson(privateKey, [], [account], 'ssc-mainnet-hive', custom_json);
+        console.log('NFT minted successfully:', result);
+      } catch (error) {
+        console.error('Error minting NFT:', error);
+      }
+    }
+
+    // Form submission handler
+    document.getElementById('mintForm').addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const account = 'your_account';
+      const privateKey = 'your_private_key';
+      const nftName = document.getElementById('nftName').value;
+      const nftPicture = document.getElementById('nftPicture').value;
+      const quantity = document.getElementById('quantity').value;
+      const price = document.getElementById('price').value;
+
+      mintNFT(account, privateKey, nftName, nftPicture, quantity, price);
+    });
+  </script>
+</body>
+</html>
